@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
                 apiException.getHttpStatus().value(), apiException.getMessage(),
                 System.currentTimeMillis()
         );
-        return new ResponseEntity(apiResponseError, apiException.getHttpStatus());
+        return new ResponseEntity<>(apiResponseError, apiException.getHttpStatus());
     }
 
     @ExceptionHandler
@@ -26,6 +26,6 @@ public class GlobalExceptionHandler {
                  HttpStatus.INTERNAL_SERVER_ERROR.value(),exception.getMessage(),
                 System.currentTimeMillis()
         );
-        return new ResponseEntity(apiResponseError, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(apiResponseError, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

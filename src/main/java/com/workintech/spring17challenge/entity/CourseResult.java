@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class CourseResult {
     private Course course;
-    private double totalGpa;
+    private Integer totalGpa;
 }

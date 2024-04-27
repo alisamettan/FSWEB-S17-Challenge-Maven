@@ -7,7 +7,7 @@ public class CalculationGpa {
     private static CourseGpa mediumCourseGpa=new MediumCourseGpa();
     private static CourseGpa highCourseGpa=new HighCourseGpa();
 
-    public static double calculateTotalGpa(Course course){
+    public static int calculateTotalGpa(Course course){
         if(course.getCredit()<=2){
             return course.getGrade().getCoefficient() * course.getCredit() * lowCourseGpa.getGpa();
             
